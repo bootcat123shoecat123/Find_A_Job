@@ -1,0 +1,13 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/Site/USS_SiteUISet.uss?fileID=7433441132597879392&amp;guid=82c9c7422a585ca4e92208dec24a2336&amp;type=3#USS_SiteUISet" />
+    <ui:VisualElement style="height: 80%; flex-direction: column-reverse; width: 100%; align-items: center; justify-content: flex-end; left: 0; background-color: rgb(237, 255, 254); bottom: -4000px; position: absolute; top: 20%; right: 0; border-left-width: 0; border-right-width: 0; border-top-width: 0; border-bottom-width: 0; border-left-color: rgb(136, 213, 214); border-right-color: rgb(136, 213, 214); border-top-color: rgb(136, 213, 214); border-bottom-color: rgb(136, 213, 214);">
+        <ui:ScrollView style="left: 0; width: 80%; height: 100%; bottom: 0; top: 0; right: 0; position: relative;" />
+    </ui:VisualElement>
+    <ui:GroupBox style="flex-direction: row; top: 10%; left: 0; justify-content: center;">
+        <ui:Button text="Button" display-tooltip-when-elided="true" style="height: 100px; width: 300px;" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" style="height: 100px; width: 300px;" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" style="height: 100px; width: 300px;" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" style="height: 100px; width: 300px;" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" style="height: 100px; width: 300px;" />
+    </ui:GroupBox>
+</ui:UXML>
