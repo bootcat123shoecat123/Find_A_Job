@@ -1,0 +1,19 @@
+.BStyle_SystemChange {
+    background-image: url("project://database/Assets/Site/T%EF%BC%BFChangePageBtn.png?fileID=2800000&guid=046184c4180e54e4f9ee584981839a36&type=3#T＿ChangePageBtn");
+    color: rgb(255, 255, 255);
+}
+
+.BStyle_SystemChange:hover {
+    color: rgb(255, 255, 255);
+    background-image: url("project://database/Assets/Site/T%EF%BC%BFChangePageBtn.png?fileID=2800000&guid=046184c4180e54e4f9ee584981839a36&type=3#T＿ChangePageBtn");
+    -unity-background-image-tint-color: rgba(255, 255, 255, 0.85);
+    transition-property: color;
+    transition-duration: 0.2s;
+}
+
+.BStyle_SystemChange:active {
+    background-image: url("project://database/Assets/Site/T%EF%BC%BFChangePageBtnForce.png?fileID=2800000&guid=d4cd78382558b7b418729c3c32415f38&type=3#T＿ChangePageBtnForce");
+    background-color: rgb(255, 255, 255);
+    color: rgb(46, 139, 220);
+    -unity-font-style: bold;
+}
