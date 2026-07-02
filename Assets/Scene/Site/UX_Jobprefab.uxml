@@ -1,0 +1,18 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Scene/Site/USS_Jobprefab.uss?fileID=7433441132597879392&amp;guid=f90070529a5a2884bae0866990fe27e7&amp;type=3#USS_Jobprefab"/>
+    <ui:VisualElement style="flex-grow: 1; border-top-width: 2px; border-right-width: 2px; border-bottom-width: 2px; border-left-width: 2px; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-left-color: rgb(166, 245, 243); border-right-color: rgb(166, 245, 243); border-top-color: rgb(166, 245, 243); border-bottom-color: rgb(166, 245, 243);">
+        <ui:VisualElement style="flex-grow: 1; bottom: 0%; top: 0%;">
+            <ui:Image style="height: 100%; width: 100%; background-image: resource(&quot;JobPic/ChatGPT Image 2026年6月12日 21_07_40&quot;);"/>
+        </ui:VisualElement>
+        <ui:VisualElement style="flex-grow: 1; bottom: auto; top: 0%; transform-origin: top; background-color: rgba(255, 255, 255, 0.89); flex-basis: 10%; flex-wrap: nowrap;">
+            <ui:Label text="Label" name="name" style="font-size: 30px; -unity-font-style: bold; -unity-text-align: upper-center; transform-origin: top; color: rgb(56, 157, 217);"/>
+            <ui:Label text="Label" name="work" style="font-size: 20px; white-space: pre-wrap; bottom: 0%; top: 0%; padding-top: 10px; padding-bottom: 10px; background-color: rgb(224, 224, 224);"/>
+            <ui:Label text="Label" name="Loc" enable-rich-text="true" style="font-size: 20px; bottom: 0%; top: 0%; padding-top: 2px; padding-bottom: 2px; margin-bottom: 0;"/>
+            <ui:Label text="Label" name="Tel" enable-rich-text="true" style="font-size: 20px; bottom: 0%; top: 0%; padding-top: 2px; padding-bottom: 2px; margin-top: 0; white-space: nowrap; -unity-text-align: upper-left;"/>
+            <ui:Button text="" name="Like" class="apply-button" style="bottom: 0%; justify-content: center; align-content: flex-end; position: relative; right: 0%; left: 0%; transform-origin: bottom; height: 74px; background-color: rgb(255, 255, 255); border-left-color: rgb(83, 164, 236); border-right-color: rgb(83, 164, 236); border-top-color: rgb(83, 164, 236); border-bottom-color: rgb(83, 164, 236); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; color: rgb(7, 106, 135); -unity-font-style: bold; font-size: 20px; flex-direction: row; align-items: center;">
+                <ui:Image source="project://database/Assets/Layer%20Lab/2D%20Icons-PictoIconPack01/Icons/PictoIcon_128/Icon_PictoIcon_Heart_Empty.Png?fileID=2800000&amp;guid=ad8898653af0b448890c5ae489919fcd&amp;type=3#Icon_PictoIcon_Heart_Empty" tint-color="rgb(83, 164, 236)" style="width: 30px; height: 30px; position: relative; right: auto; color: rgb(83, 164, 236);"/>
+                <ui:Label text="気になる" name="Label" style="width: 100px; height: 30px; flex-direction: row; color: rgb(83, 164, 236); -unity-text-align: lower-center;"/>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

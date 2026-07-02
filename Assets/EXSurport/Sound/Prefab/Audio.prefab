@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &275384888265709363
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 275384888265709362}
+  - component: {fileID: 6990216579010605021}
+  m_Layer: 0
+  m_Name: Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &275384888265709362
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275384888265709363}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.8108293, y: -5.3821774, z: -7.5110044}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6990216579010605021
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 275384888265709363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45b98acce7f68934da5049b6019706d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BGM:
+  - {fileID: 8300000, guid: 643d7150492d9f34cb98dfb50d18481f, type: 3}
+  SE:
+  - {fileID: 8300000, guid: 9c0a6f1ecbf06b7448908389fbbb522a, type: 3}
+  - {fileID: 8300000, guid: 814bd9941d3618840ac3d4a3c87fb188, type: 3}
+  - {fileID: 8300000, guid: b2ffaed30cfa3464493dea28e01fc841, type: 3}
+  - {fileID: 8300000, guid: c8a631a150c8cb142b89129987383400, type: 3}
+  - {fileID: 8300000, guid: 0d6bd32579e45ec4a8c003f7f7e48984, type: 3}
+  - {fileID: 8300000, guid: 1c38c41cd48aaba4b9f259614e99e188, type: 3}
+  - {fileID: 8300000, guid: ed206509fa0afd948b142a877adeaa27, type: 3}
+  - {fileID: 8300000, guid: 50f346e9fcbac2242990f2fecfdaf2bc, type: 3}
+  Sound: []
+  Special: []
+  WipSence: 0
+  playingAudio: []
+  AudioSource: {fileID: 1554088307061673592, guid: f525b3647b50ce54d917381f1b36db65, type: 3}
+  Mixer: {fileID: 24100000, guid: 8182d46dbcbccf24eb0d4b82eb329c35, type: 2}

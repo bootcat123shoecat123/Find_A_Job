@@ -3,3 +3,7 @@
 
 .apply-button:hover {
 }
+
+.apply-button:press {
+    background-color: rgba(166, 161, 161, 0.36);
+}
