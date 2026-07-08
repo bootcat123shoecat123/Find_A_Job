@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "com.nuskey.sqlite3.unity": "https://github.com/nuskey8/CsSqlite.git?path=src/CsSqlite.Unity/Assets/CsSqlite.Unity",
     "com.unity.ads": "4.17.0",
     "com.unity.ai.navigation": "2.0.12",
     "com.unity.collab-proxy": "2.12.4",

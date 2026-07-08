@@ -1,0 +1,9 @@
+:root {
+}
+
+.apply-button:hover {
+}
+
+.apply-button:active {
+    background-color: rgba(166, 161, 161, 0.36);
+}

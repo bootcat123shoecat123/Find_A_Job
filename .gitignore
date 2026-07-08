@@ -64,6 +64,16 @@ ExportedObj/
 *.pdb.meta
 *.mdb.meta
 
+#Image generated meta files
+.[Pp]ng.meta
+
+#Script generated meta files
+.cs.meta
+
+#UItoolkit generated meta files
+.uxml.meta
+.uss.meta
+
 # Unity3D generated file on crash reports
 sysinfo.txt
 

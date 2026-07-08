@@ -1,5 +1,12 @@
 {
   "dependencies": {
+    "com.nuskey.sqlite3.unity": {
+      "version": "https://github.com/nuskey8/CsSqlite.git?path=src/CsSqlite.Unity/Assets/CsSqlite.Unity",
+      "depth": 0,
+      "source": "git",
+      "dependencies": {},
+      "hash": "3b2e62c22c5efa6c8a8a29c77fdd983b6f5f761c"
+    },
     "com.unity.2d.animation": {
       "version": "13.0.4",
       "depth": 1,

@@ -1,0 +1,7 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="VisualElement" style="flex-grow: 0; background-color: rgb(224, 224, 224); border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-right-radius: 10px; border-bottom-left-radius: 10px; border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; border-left-color: rgb(255, 255, 255); border-right-color: rgb(255, 255, 255); border-top-color: rgb(255, 255, 255); border-bottom-color: rgb(255, 255, 255); width: 200px; height: 250px; position: relative; aspect-ratio: auto;">
+        <ui:Label text="Name" name="Name" style="font-size: 30px; -unity-text-align: upper-center; -unity-font-style: bold; top: 5%;"/>
+        <ui:Image name="Icon" style="flex-grow: 0; background-image: resource(&quot;Images/CardPic/パンチアイコン1&quot;); top: 5%; height: 40%; -unity-slice-type: sliced; -unity-background-scale-mode: scale-to-fit; border-top-width: 3px; border-right-width: 3px; border-bottom-width: 3px; border-left-width: 3px; border-left-color: rgb(0, 0, 0); border-right-color: rgb(0, 0, 0); border-top-color: rgb(0, 0, 0); border-bottom-color: rgb(0, 0, 0);"/>
+        <ui:Label text="Label" name="Description" style="top: 5%; font-size: 15px;"/>
+    </ui:VisualElement>
+</ui:UXML>
