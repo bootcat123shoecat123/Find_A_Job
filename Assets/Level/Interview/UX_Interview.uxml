@@ -1,9 +1,0 @@
-<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
-    <ui:Template name="UX_ResponeCard" src="project://database/Assets/Level/Interview/UX_ResponeCard.uxml?fileID=9197481963319205126&amp;guid=a05fbafce30c9214bbad73edae9ee471&amp;type=3#UX_ResponeCard"/>
-    <ui:VisualElement name="Root" style="flex-grow: 1; background-image: url(&quot;project://database/Assets/Level/Interview/pexels-chairs-2181994.jpg?fileID=2800000&amp;guid=adb1bb3c67a496f44b8c72de9534524a&amp;type=3#pexels-chairs-2181994&quot;);">
-        <ui:Image scale-mode="ScaleToFit" focusable="false" name="IMG_Interviewer" style="position: absolute; top: 10%; left: 0%; background-image: resource(&quot;Images/Interviewer/animal_chara_judo_gorilla&quot;); background-color: rgba(255, 255, 255, 0); -unity-text-align: upper-left; white-space: normal; width: auto; height: 50%; transform-origin: center; min-width: 15%; min-height: 15%; max-width: 100%; max-height: 100%; flex-grow: 1; flex-shrink: 1; right: 0%; bottom: auto; background-size: 100% 100%; -unity-background-scale-mode: scale-to-fit; background-position-x: center; background-position-y: center; background-repeat: no-repeat no-repeat;"/>
-        <ui:VisualElement name="CardPlace" style="flex-grow: 0; top: 50%; position: absolute; bottom: 10%; flex-basis: auto; left: 10%; flex-shrink: 0; right: 10%; background-color: rgba(140, 138, 138, 0.35); align-items: center; align-self: center; align-content: flex-start; justify-content: center;">
-            <ui:Instance template="UX_ResponeCard"/>
-        </ui:VisualElement>
-    </ui:VisualElement>
-</ui:UXML>

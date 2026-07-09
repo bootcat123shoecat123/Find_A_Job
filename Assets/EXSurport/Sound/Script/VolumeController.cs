@@ -7,14 +7,13 @@ namespace SupSystem
 {
     public class VolumeController : MonoBehaviour
     {
-        [SerializeField] SoundController.AudioType volumeName;
+        [SerializeField] SoundController.SoundChannel volumeName;
         // Start is called before the first frame update
         SoundController soundController;
         Slider volumeSlider;
         void Start()
         {
-            soundController=FindObjectOfType<SoundController>();
-            Debug.Log(soundController.gameObject.name);
+            soundController=FindFirstObjectByType<SoundController>();
             volumeSlider =GetComponent<Slider>();
             volumeSlider.minValue = -40;
             volumeSlider.maxValue = 0;

@@ -15,15 +15,15 @@ namespace SupSystem
         // Update is called once per frame
         public void PlayBGM()
         {
-            soundController.PlayAudio("遠い夜明け", SoundController.AudioType.BGM, true);
+            soundController.PlayAudio("遠い夜明け", SoundController.SoundChannel.BGM, true);
         }
         public void PlaySE()
         {
-            soundController.PlayAudio(soundController.SE[0], SoundController.AudioType.SE, false);
+            soundController.PlayAudio(soundController.SE[0], SoundController.SoundChannel.SE, false);
         }
         public void PlaySpecial()
         {
-            soundController.PlayAudio(soundController.Special[0], SoundController.AudioType.Special, false);
+            soundController.PlayAudio(soundController.Special[0], SoundController.SoundChannel.Special, false);
         }
     }
 }

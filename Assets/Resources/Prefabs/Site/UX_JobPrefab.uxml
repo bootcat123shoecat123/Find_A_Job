@@ -1,0 +1,17 @@
+<ui:UXML xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" noNamespaceSchemaLocation="../../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <Style src="project://database/Assets/Level/Site/UI/USS_JobStyle.uss?fileID=7433441132597879392&amp;guid=f90070529a5a2884bae0866990fe27e7&amp;type=3#USS_JobStyle"/>
+    <ui:VisualElement name="root" style="flex-grow: 0; border-top-width: 0; border-right-width: 0; border-bottom-width: 0; border-left-width: 0; border-top-left-radius: 10px; border-top-right-radius: 10px; border-bottom-left-radius: 10px; border-bottom-right-radius: 10px; border-left-color: rgb(157, 196, 202); border-right-color: rgb(157, 196, 202); border-top-color: rgb(157, 196, 202); border-bottom-color: rgb(157, 196, 202); background-size: 100% 100%; width: 350px; height: 450px; margin-left: 20px; margin-right: 20px; flex-direction: column; left: 0%; right: 0%; top: 0%; bottom: 0%;">
+        <ui:VisualElement name="ImageDeck" style="flex-grow: 0; bottom: 0%; top: 0%; width: 350px; height: 200px; position: relative; left: 0%;">
+            <ui:Image name="IMG_JobImage" style="height: 100%; width: 100%; background-image: url(&quot;project://database/Assets/UI%20Toolkit/UnityThemes/UnityDefaultRuntimeTheme.tss?fileID=8228938214290033325&amp;guid=191d2f678593f6a4099580213f07cdd6&amp;type=3#console.warnicon&quot;); -unity-background-scale-mode: scale-to-fit;"/>
+        </ui:VisualElement>
+        <ui:VisualElement name="InformationPanel" style="flex-grow: 0; bottom: 0%; top: 0%; transform-origin: top; background-color: rgba(255, 255, 255, 0.89); flex-basis: auto; flex-wrap: nowrap; height: 250px; width: 350px; position: relative; left: 0%; right: 0%;">
+            <ui:Label text="Label" name="T_JobCompany" style="font-size: 25%; -unity-font-style: bold; -unity-text-align: upper-center; transform-origin: top; color: rgb(56, 157, 217);"/>
+            <ui:Label text="Label" name="T_JobWork" style="font-size: 20px; white-space: pre-wrap; bottom: 0%; top: 0%; padding-top: 10px; padding-bottom: 10px; background-color: rgb(224, 224, 224);"/>
+            <ui:Label text="Label" name="T_JobLoc" enable-rich-text="true" style="font-size: 20px; bottom: 0%; top: 0%; padding-top: 2px; padding-bottom: 2px; margin-bottom: 0;"/>
+            <ui:Label text="Label" name="T_JobTel" enable-rich-text="true" style="font-size: 20px; bottom: 0%; top: 0%; padding-top: 2px; padding-bottom: 2px; margin-top: 0; white-space: nowrap; -unity-text-align: upper-left;"/>
+            <ui:Button text="" name="B_Like" double-click-selects-word="false" triple-click-selects-line="false" class="apply-button BLike" style="bottom: 0%; justify-content: center; align-content: flex-end; position: relative; right: 0%; left: 0%; transform-origin: bottom; height: 74px; background-color: rgb(255, 255, 255); border-left-color: rgb(83, 151, 236); border-right-color: rgb(83, 151, 236); border-top-color: rgb(83, 151, 236); border-bottom-color: rgb(83, 151, 236); border-top-width: 5px; border-right-width: 5px; border-bottom-width: 5px; border-left-width: 5px; color: rgb(70, 162, 197); -unity-font-style: bold; font-size: 20px; flex-direction: row; align-items: center;">
+                <ui:Label text="面接スタート" name="Label" style="width: 100px; height: 30px; flex-direction: row; color: rgb(66, 157, 178); -unity-text-align: lower-center;"/>
+            </ui:Button>
+        </ui:VisualElement>
+    </ui:VisualElement>
+</ui:UXML>

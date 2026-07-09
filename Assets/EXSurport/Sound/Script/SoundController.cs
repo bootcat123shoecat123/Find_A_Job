@@ -10,6 +10,7 @@ namespace SupSystem
     public class SoundController : MonoBehaviour
     {
         // Start is called before the first frame update
+        public static SoundController Instance;
         public List<AudioClip> BGM;
         public List<AudioClip> SE;
         public List<AudioClip> Sound;
@@ -17,12 +18,9 @@ namespace SupSystem
         public bool WipSence;
         public List<AudioSource> playingAudio;
         [SerializeField] GameObject AudioSource;
-        [SerializeField] AudioMixer Mixer;
+        public AudioMixer Mixer;
         void Start()
         {
-
-            
-            
             if (FindObjectsByType<SoundController>(0).Length > 1)
             {
                 Destroy(gameObject);
@@ -31,42 +29,42 @@ namespace SupSystem
             {
                 DontDestroyOnLoad(gameObject);
             }
+            Instance=this;
         }
         
-        // Update is called once per frame
-        public void PlayAudio(AudioClip sound, AudioType audioType, bool isLoop = false)
+        public void PlayAudio(AudioClip sound, SoundChannel audioType, bool isLoop = false)
         {
             GameObject audio = Instantiate(AudioSource,transform);
             AudioSource source = audio.GetComponent<AudioSource>();
-            source.outputAudioMixerGroup = Mixer.FindMatchingGroups(Enum.GetName(typeof(AudioType), audioType))[0];
+            source.outputAudioMixerGroup = Mixer.FindMatchingGroups(Enum.GetName(typeof(SoundChannel), audioType))[0];
             source.loop = isLoop;
             source.clip = sound;
             playingAudio.Add(source);
             source.Play();
             if (!isLoop) StartCoroutine(RemoveSound(source, source.clip.length + 0.1f));
         }
-        public void PlayAudio(string sound, AudioType audioType, bool isLoop = false)
+        public void PlayAudio(string sound, SoundChannel audioType, bool isLoop = false)
         {
             GameObject audio = Instantiate(AudioSource, transform);
             AudioSource source = audio.GetComponent<AudioSource>();
-            source.outputAudioMixerGroup = Mixer.FindMatchingGroups(Enum.GetName(typeof(AudioType), audioType))[0];
+            source.outputAudioMixerGroup = Mixer.FindMatchingGroups(Enum.GetName(typeof(SoundChannel), audioType))[0];
             source.loop = isLoop;
             List<AudioClip> TargetList=null;
             switch (audioType)
             {
                 
-                case AudioType.BGM:
+                case SoundChannel.BGM:
                     TargetList = BGM;
                     break;
-                case AudioType.SE:
+                case SoundChannel.SE:
                     TargetList = SE;
 
                     break;
-                case AudioType.Sound:
+                case SoundChannel.Sound:
 
                     TargetList = Sound;
                     break;
-                case AudioType.Special:
+                case SoundChannel.Special:
                     TargetList = Special;
                     break;
                 default:
@@ -87,9 +85,15 @@ namespace SupSystem
             AudioSource source=playingAudio.Find(e=>e.clip.name== name);
             source.Pause(); StartCoroutine(RemoveSound(source, source.clip.length + 0.1f));
         }
-        public void ControllMixerVolume(AudioType audioType, float vol)
+        public void ControllMixerVolume(SoundChannel audioType, float vol)
         {
-            Mixer.SetFloat(Enum.GetName(typeof(AudioType), audioType) + "Vol", vol);
+            Mixer.SetFloat(Enum.GetName(typeof(SoundChannel), audioType) + "Vol", vol);
+        }
+        public float GetVolume(SoundChannel audioType)
+        {
+            float vol;
+            Mixer.GetFloat(Enum.GetName(typeof(SoundChannel), audioType) + "Vol", out vol);
+            return vol;
         }
         IEnumerator RemoveSound(AudioSource sound,float time)
         {
@@ -98,7 +102,7 @@ namespace SupSystem
             Destroy(sound.gameObject, 0);
 
         }
-        public enum AudioType
+        public enum SoundChannel
         {
             Master,
             BGM,

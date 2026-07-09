@@ -1,0 +1,28 @@
+:root {
+}
+
+.cardItem:hover {
+    border-left-color: rgb(28, 217, 46);
+    border-right-color: rgb(28, 217, 46);
+    border-top-color: rgb(28, 217, 46);
+    border-bottom-color: rgb(28, 217, 46);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+}
+
+.cardItem:active {
+    border-left-color: rgb(52, 255, 65);
+    border-right-color: rgb(52, 255, 65);
+    border-top-color: rgb(52, 255, 65);
+    border-bottom-color: rgb(52, 255, 65);
+    border-top-width: 5px;
+    border-right-width: 5px;
+    border-bottom-width: 5px;
+    border-left-width: 5px;
+    background-color: rgba(140, 140, 140, 0.84);
+}
+
+.cardItem {
+}

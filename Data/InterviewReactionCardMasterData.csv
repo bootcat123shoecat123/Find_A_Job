@@ -1,0 +1,30 @@
+Card_ID,Card_Name,Card_Color,Card_Detail,Card_Text,Card_Effect,Card_Tag
+Card_001,戦い！,SSR,殴れ！あいつの顔を殴れ！,オラオラオラオラ！！Wryyyyyyyyy！！,"g+1,s+2,t-1",Punch
+Card_002,あ,SSR,あ。サメが最初に学んだ言葉、危険な答え,あ,"g+1,l+10","A, Simple"
+Card_003,過去フリ,R,膝に矢を受けてしまってな,（過去O影になった経験を述べる）,"t-2,l+5","Skilled, Fake, Complex, Chuuni"
+Card_004,即落アンサー,SSR,"“即落ちる人”のランキングはこれ↓\n
+5位：「お前」\n
+4位：「貴様」\n
+3位：「クソ」\n
+2位：「君の日本語上手ですね」\n
+1位：「落ちらせてください！」",君の日本語上手ですね,"g+1,t+10","Joke, Honesty, Rude"
+Card_005,標準アンサー,N,"“普通な人”のランキングはこれ↓\n
+5位：「そうですか」\n
+4位：「それな」\n
+3位：「はい」\n
+2位：「了解しました」\n
+1位：「私が『仕事を探す』ゲームを作ったよ、凄くない？」",そうですか,"t+2,l+1","Simple, Courtesy"
+Card_006,プロアンサー,SR,"“プロな人”のランキングはこれ↓\n
+5位：（20字）\n
+4位：（40字）\n
+3位：（60字）\n
+2位：（100字）\n
+1位：そもそも転職いらん",（100文略）,"t+5,l+5","Courtesy, Etiquette, Skilled, complex, Complex"
+Card_007,ウェイ系,R,ウェーイ！ウェーイ！ウェーイ！とにかくウェーイ！,ウェーイ！,"t+1,l+4","Way, Etiquette"
+Card_008,N5日本語,N,天気がいいから、散歩しましょう。,はい、私は……,"t+1,l+1","Inept, Honesty, Rude"
+Card_009,普通な噓,N,噓は、成長に必要なスキルであるんだ！,実はね……,"t-1,l+2","Complex, Fake, Etiquette"
+Card_010,正直な答え,N,正直に答いましょう。,実はね……,"t+2,l-1","Inept, Honesty, Rude"
+Card_011,敬語,R,この度は、貴重なご時間を頂き誠に感謝申し上げます。,この度は……,l+5,"Complex, Courtesy"
+Card_012,ですます調,N,貴重な時間をいただき本当に感謝しています。,ますですますです……,l+3,"Courtesy, Simple"
+Card_013,中二病,SSR,なんで左手が疼くんですか？右手じゃダメなんですか？,凡人よ、知るがいい。,"g+1,l+10","Chuuni, Fake, Rude"
+Card_014,さん抜き,N,今から仲良し！,面接官！俺はね……,"t+5,l-2","Rude, Etiquette, Honesty"

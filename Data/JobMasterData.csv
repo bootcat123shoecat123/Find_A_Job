@@ -1,0 +1,5 @@
+Job_ID,Job_Company,Job_Category,Job_Work,Job_Loc,Job_Tel,Job_ImagePath,Job_Interviewer
+Job_001,株式会社フリーズ,IT,インフラエンジニア,東京,03-3372-4149,Images/JobPic/IT,Interviewer_001
+Job_002,株式会社OldGame,Creater,ゲームプログラマー,大阪,06-3872-0183,Images/JobPic/Create,Interviewer_002
+Job_003,株式会社グルクンの唐揚げ,Stuff,水族館Stuff,沖縄,098-5684-6108,Images/JobPic/Stuff,Interviewer_003
+Job_004,株式会社IOIO,Sport,拳闘,群馬,027-6666-2222,Images/JobPic/Boxing,Interviewer_004
