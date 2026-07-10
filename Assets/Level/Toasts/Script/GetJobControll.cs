@@ -5,7 +5,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UIElements;
 
-public class GameOverControll : ToastBase
+public class GetJobControll : ToastBase
 {
     Button rejectButton, acceptButton;
     
@@ -25,7 +25,7 @@ public class GameOverControll : ToastBase
 
         if (acceptButton != null)
             acceptButton.clicked += ReturnSite;
-        SoundController.Instance.PlayAudio("Lose", SoundController.SoundChannel.SE);
+        SoundController.Instance.PlayAudio("Success", SoundController.SoundChannel.SE);
     }
 
     private void OnDisable()
@@ -36,9 +36,9 @@ public class GameOverControll : ToastBase
             acceptButton.clicked -= ReturnSite;
     }
 
-    public static void InitGameOverToast()
+    public static void InitGetJobToast()
     {
-        CreateToast(Resources.Load("Prefabs/Toast/GameOverPrefab"));
+        CreateToast(Resources.Load("Prefabs/Toast/GetJobPrefab"));
     }
     private void ReturnSite()
     {

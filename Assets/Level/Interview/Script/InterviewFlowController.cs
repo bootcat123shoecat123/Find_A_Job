@@ -9,9 +9,12 @@ public class InterviewFlowController
 {
     public List<InterviewQuestionMaster> questions;
     public static InterviewFlowController instance;
-    public InterviewCardDeck currentCardDeck;
-    public InterviewQuestionDeck currentQuestionDeck;
+    public InterviewCardDeck currentCardDeck=new InterviewCardDeck();
+    public InterviewQuestionDeck currentQuestionDeck = new InterviewQuestionDeck();
+    public InterviewerMaster currrentInterviewer;
 
+    public List<InterviewReactionCardMaster> currentDrawCards = new List<InterviewReactionCardMaster>();
+    public List<InterviewQuestionMaster> currentDrawQuestions = new List<InterviewQuestionMaster>();
     // Interview Stats
     public int trust;
     public int like;
@@ -21,9 +24,7 @@ public class InterviewFlowController
     public int garde;
 
     
-    public List<InterviewReactionCardMaster> currentDrawCards = new List<InterviewReactionCardMaster>();
-    public List<InterviewQuestionMaster> currentDrawQuestions = new List<InterviewQuestionMaster>();
-
+    #region Init
     public InterviewFlowController()
     {
         if (instance != null)
@@ -36,15 +37,36 @@ public class InterviewFlowController
     public void InstantiateInterviewFlow()
     {
         //prepare the interview card deck and interview question deck
-        currentCardDeck = InterviewCardDeck.instance;
+        currentCardDeck.InitInterviewCardDeck();
 
-        currentQuestionDeck = InterviewQuestionDeck.origin;
+        currentQuestionDeck.InitInterviewQuestionDeck();
+        InitInterview();
         //randomly select ten of the interview questions ,put them in a list 
 
-        currentQuestionDeck.questions = DealQuestion(10);
+        currentQuestionDeck.questions = DealQuestion(5);
 
 
     }
+
+    public void InitInterview()
+    {
+        // Get the interviewer ID from PlayerPrefs, defaulting to "Interviewer_001" if not set
+        string interviewerID = PlayerPrefs.GetString("Interviewer") != null ? PlayerPrefs.GetString("Interviewer") : "Interviewer_001";
+        currrentInterviewer = BinaryReader.ReadInterviewer(interviewerID);
+
+
+        List<string> QuestionIDList = currrentInterviewer.Interviewer_QuestionArray.ToList<string>();
+
+        QuestionIDList.ForEach(qID =>
+        {
+            InterviewQuestionMaster question = BinaryReader.ReadQuestion(qID);
+            currentQuestionDeck.questions.Add(question);
+        });
+        
+    }
+    #endregion
+
+    #region SetValue
     public void SetInterviewerStats(string change, E_Successfulness successfulness)
     {
         float addition = 0;
@@ -102,13 +124,15 @@ public class InterviewFlowController
             }
         }
     }
-
-    private void GameOver()
+    #endregion
+    public void GameOver()
     {
-
-        throw new System.NotImplementedException();
+        GameOverControll.InitGameOverToast();
     }
-
+    public void Win()
+    {
+        GetJobControll.InitGetJobToast();
+    }
 
     public List<InterviewReactionCardMaster> DealCard(int cardQuantity)
     {
@@ -133,7 +157,6 @@ public class InterviewFlowController
         currentDrawQuestions.Clear();
         for (int i = 0; i < questionQuantity; i++)
         {
-
             if (currentQuestionDeck.questions.Count < 1) break;
             //deal the randomly question to the player 
             int randomIndex = Random.Range(0, currentQuestionDeck.questions.Count);
@@ -145,6 +168,7 @@ public class InterviewFlowController
         }
         return currentDrawQuestions;
     }
+
     public void JudgeReaction(InterviewReactionCardMaster card)
     {
         SetInterviewerStats(card.Card_Effect, JudgeReactionSuccessfulness(card));
@@ -158,15 +182,15 @@ public class InterviewFlowController
         //judge the reaction card's tag with the question's tag,count good and bad tag match
         int good = 0;
         int bad = 0;
-        card.Card_Tag.ForEach(tag =>
+        card.Card_TagArray.ForEach(tag =>
         {
             currentDrawQuestions.ForEach(question =>
             {
-                if (question.Question_Good.Contains(tag))
+                if (question.Question_GoodArray.Contains(tag))
                 {
                     good++;
                 }
-                else if (question.Question_Bad.Contains(tag))
+                else if (question.Question_BadArray.Contains(tag))
                 {
                     bad++;
                 }
@@ -191,42 +215,9 @@ public class InterviewFlowController
         }
     }
 
-    public InterviewerMaster ReadInterviewer()
-    {
-        var messagePackResolvers = CompositeResolver.Create(
-           MasterMemory.MasterMemoryResolver.Instance,
-           StandardResolver.Instance
-       );
-        var options = MessagePackSerializerOptions.Standard.WithResolver(messagePackResolvers);
-        MessagePackSerializer.DefaultOptions = options;
-
-        var path = "Binary/InterviewerMasterData";
-        var asset = Resources.Load<TextAsset>(path);
-        var binary = asset.bytes;
-
-        var memoryDatabase = new MasterMemory.MemoryDatabase(binary);
-
-        // Get the interviewer ID from PlayerPrefs, defaulting to "Interviewer_001" if not set
-        string interviewerID = PlayerPrefs.GetString("Interviewer")!=null? PlayerPrefs.GetString("Interviewer"): "Interviewer_001";
-        return memoryDatabase.InterviewerMasterTable.FindByInterviewer_ID(interviewerID);
-    }
 
 
+    
 
-    internal InterviewQuestionMaster ReadQuestion(string qID)
-    {
-        var messagePackResolvers = CompositeResolver.Create(
-           MasterMemory.MasterMemoryResolver.Instance,
-           StandardResolver.Instance
-       );
-        var options = MessagePackSerializerOptions.Standard.WithResolver(messagePackResolvers);
-        MessagePackSerializer.DefaultOptions = options;
 
-        var path = "Binary/InterviewQuestionMasterData";
-        var asset = Resources.Load<TextAsset>(path);
-        var binary = asset.bytes;
-
-        var memoryDatabase = new MasterMemory.MemoryDatabase(binary);
-        return memoryDatabase.InterviewQuestionMasterTable.FindByQuestion_ID(qID);
-    }
 }

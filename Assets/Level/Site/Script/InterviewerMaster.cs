@@ -20,16 +20,16 @@ public record InterviewerMaster
 
     [IgnoreMember]
     //Change raw Data
-    public string[] Interviewer_QuestionArray
+    public List<string> Interviewer_QuestionArray
     {
         get
         {
-            if (string.IsNullOrWhiteSpace(Interviewer_Question)) return Array.Empty<string>();
+            if (string.IsNullOrWhiteSpace(Interviewer_Question)) return new List<string>();
             return Interviewer_Question
                 .Split(new[] { ',' }, StringSplitOptions.RemoveEmptyEntries)
                 .Select(s => s.Trim())
                 .Where(s => s.Length > 0)
-                .ToArray();
+                .ToList();
         }
     }
 }

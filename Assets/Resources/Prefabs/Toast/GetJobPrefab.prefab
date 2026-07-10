@@ -10,9 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2574256203452892874}
   - component: {fileID: 5663091110293001673}
-  - component: {fileID: 4734642735260613134}
+  - component: {fileID: 6740823128257262985}
   m_Layer: 5
-  m_Name: 'GameOverPrefab '
+  m_Name: GetJobPrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47,7 +47,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.UIElements.UIDocument
   m_PanelSettings: {fileID: 11400000, guid: 86fd8908b32db7c499abf7337ab2c390, type: 2}
   m_ParentUI: {fileID: 0}
-  sourceAsset: {fileID: 9197481963319205126, guid: 5e71e0b55dbc9444e951828ba08e8f86, type: 3}
+  sourceAsset: {fileID: 9197481963319205126, guid: 01a1cec4240fc9b469824c11e8f1fdb7, type: 3}
   m_SortingOrder: 999
   m_Position: 0
   m_WorldSpaceSizeMode: 1
@@ -56,7 +56,7 @@ MonoBehaviour:
   m_PivotReferenceSize: 0
   m_Pivot: 0
   m_WorldSpaceCollider: {fileID: 0}
---- !u!114 &4734642735260613134
+--- !u!114 &6740823128257262985
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -65,6 +65,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6105649994879357693}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 938f7967c2898964190055bc2fc53b68, type: 3}
+  m_Script: {fileID: 11500000, guid: 879f1f6dad0e98c4c88d2dbe448f4519, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::GameOverControll
+  m_EditorClassIdentifier: Assembly-CSharp::GetJobControll
